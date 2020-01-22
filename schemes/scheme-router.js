@@ -3,7 +3,7 @@ const express = require('express');
 const Schemes = require('./scheme-model.js');
 
 const router = express.Router();
-
+//ok
 router.get('/', (req, res) => {
   Schemes.find()
   .then(schemes => {
@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     res.status(500).json({ message: 'Failed to get schemes' });
   });
 });
-
+//ok
 router.get('/:id', (req, res) => {
   const { id } = req.params;
 
@@ -29,7 +29,7 @@ router.get('/:id', (req, res) => {
     res.status(500).json({ message: 'Failed to get schemes' });
   });
 });
-
+//ok
 router.get('/:id/steps', (req, res) => {
   const { id } = req.params;
 
@@ -45,7 +45,7 @@ router.get('/:id/steps', (req, res) => {
     res.status(500).json({ message: 'Failed to get steps' });
   });
 });
-
+//ok
 router.post('/', (req, res) => {
   const schemeData = req.body;
 
@@ -77,7 +77,7 @@ router.post('/:id/steps', (req, res) => {
     res.status(500).json({ message: 'Failed to create new step' });
   });
 });
-
+//ok
 router.put('/:id', (req, res) => {
   const { id } = req.params;
   const changes = req.body;
@@ -97,7 +97,7 @@ router.put('/:id', (req, res) => {
     res.status(500).json({ message: 'Failed to update scheme' });
   });
 });
-
+//ok
 router.delete('/:id', (req, res) => {
   const { id } = req.params;
 
